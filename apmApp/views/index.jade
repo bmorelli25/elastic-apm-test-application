@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to a simple #{title}
+
+
+  p Available routes:
+  ul
+    li
+      a(href='/error?id=customError') /error
+      | - custom error creation
+    li 
+      a(href='/metadata') /metadata
+      | - errors with user data and custom metrics
+    li 
+      a(href='/addtags') /addtags
+      | - add tags to errors
+    li 
+      a(href='/delayresponse') /delayresponse
+      | - this page only responds after 1500 milliseconds
+    li 
+      a(href='/404') 404
+      | - takes you a nonexistant route
